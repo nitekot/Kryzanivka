@@ -2,54 +2,102 @@
 body {
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
-  background-image: url(img/bg_main.png);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
-
+.body_slides{
+  list-style:none;
+  margin:0;
+  padding:0;
+  z-index:-2; 
+  background:#000;
+}
+.body_slides,
+.body_slides:after{
+  position: fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;}
+.body_slides:after { 
+  content: '';
+  background: transparent url(images/pattern.png) repeat top left;
+}
+.body_slides li{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background-size:cover;
+  background-repeat:no-repeat;
+  opacity:0;
+  -webkit-animation: anim_slides 18s linear infinite 0s;
+  -moz-animation: anim_slides 18s linear infinite 0s;
+  -o-animation: anim_slides 18s linear infinite 0s;
+  -ms-animation: anim_slides 18s linear infinite 0s;
+  animation: anim_slides 18s linear infinite 0s;
+}
+.body_slides li:nth-child(1){
+background-image: url(/img/bg_main.png) 
+}
+.body_slides li:nth-child(2){
+-webkit-animation-delay: 6.0s;
+-moz-animation-delay: 6.0s;
+background-image: url(/img/bg_main2.png) 
+}
+.body_slides li:nth-child(3){
+-webkit-animation-delay: 12.0s;
+-moz-animation-delay: 12.0s;
+background-image: url(/img/bg_main3.png) 
+}
+@-webkit-keyframes anim_slides {
+0% {opacity:0;}
+6% {opacity:1;}
+24% {opacity:1;}
+30% {opacity:0;}
+100% {opacity:0;}
+}
+@-moz-keyframes anim_slides {
+0% {opacity:0;}
+6% {opacity:1;}
+24% {opacity:1;}
+30% {opacity:0;}
+100% {opacity:0;}
+}
 header {
   margin-top: 15px;
   display: flex;
   font-size: 20px;
   align-items: center;
 }
-
 .logo {
   display: flex;
 }
-
 .content_header {
   display: flex;
 }
-
 .location {
   margin-left: 315px;
   display: flex;
   align-content: center;
 }
-
 .location_content {
   width: 200px;
   margin-left: 30px;
   color: white;
 }
-
 .tel {
   margin-left: 120px;
   display: flex;
   align-content: center;
 }
-
 .tel .tel_content {
   margin-left: 30px;
   color: white;
   width: 200px;
 }
-
 .menu {
   margin-left: 130px;
 }
-
 h1 {
   font-family: 'Nunito', sans-serif;
   font-style: normal;
