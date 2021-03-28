@@ -198,7 +198,7 @@ input {
   margin-top: 8px;
 }
 .hidden-menu {
-  align-items: center;
+  margin-left: 900px;
   display: block;
   position: fixed;
   list-style:none;
