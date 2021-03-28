@@ -1,27 +1,26 @@
-
 body {
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
 }
-.body_slides{
+.bg_photo{
   list-style:none;
   margin:0;
   padding:0;
   z-index:-2; 
   background:#000;
 }
-.body_slides,
-.body_slides:after{
+.bg_photo,
+.bg_photo:after{
   position: fixed;
   width:100%;
   height:100%;
   top:0px;
   left:0px;}
-.body_slides:after { 
+.bg_photo:after { 
   content: '';
   background: transparent url(images/pattern.png) repeat top left;
 }
-.body_slides li{
+.bg_photo li{
   width:100%;
   height:100%;
   position:absolute;
@@ -36,15 +35,15 @@ body {
   -ms-animation: anim_slides 18s linear infinite 0s;
   animation: anim_slides 18s linear infinite 0s;
 }
-.body_slides li:nth-child(1){
+.bg_photo li:nth-child(1){
 background-image: url(/img/bg_main.png) 
 }
-.body_slides li:nth-child(2){
+.bg_photo li:nth-child(2){
 -webkit-animation-delay: 6.0s;
 -moz-animation-delay: 6.0s;
 background-image: url(/img/bg_main2.png) 
 }
-.body_slides li:nth-child(3){
+.bg_photo li:nth-child(3){
 -webkit-animation-delay: 12.0s;
 -moz-animation-delay: 12.0s;
 background-image: url(/img/bg_main3.png) 
@@ -305,7 +304,7 @@ input {
   backdrop-filter: blur(2px);
   height: 100%;
   top: 0;
-  left: 1500px;
+  left: 1902px;
   transition: left .2s;
   z-index: 2;
   -webkit-transform: translateZ(0);
@@ -319,7 +318,7 @@ input {
   padding: 5px;
   position: fixed;
   top: 40px;
-  left: 1390px;
+  left: 1850px;
   cursor: pointer;
   transition: left .23s;
   z-index: 3;
@@ -339,10 +338,10 @@ input {
   margin-top: 0;
 }
 .hidden-menu-ticker:checked ~ .btn-menu {
-  left: 1390px;
+  left: 1850px;
 }
 .hidden-menu-ticker:checked ~ .hidden-menu {
-  left: 1124px;
+  left: 1600px;
 }
 .hidden-menu-ticker:checked ~ .btn-menu span.first {
   -webkit-transform: rotate(45deg);
